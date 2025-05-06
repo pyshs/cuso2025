@@ -2,7 +2,7 @@
 title: "Python pour les SHS"
 subtitle: "Pourquoi programmer en Python ?"
 author: "Émilien Schultz"
-date: 2024-12-12
+date: 2025-09-05
 #format: pptx
 format: 
     revealjs:
@@ -68,7 +68,7 @@ Dépôt Github : [https://github.com/pyshs/cuso2025](https://github.com/pyshs/cu
 
 1. Pourquoi programmer ?
 2. Les bases du langage Python
-3. Bibliothèques & Écosystème
+3. Bibliothèques & écosystème
 4. Données tabulaires avec Pandas
 5. Éléments sur les statistiques et visualisations
 6. Introduction au traitement des données textuelles
@@ -102,7 +102,7 @@ Dépôt Github : [https://github.com/pyshs/cuso2025](https://github.com/pyshs/cu
 - Croissance et circulation des données
     - Comment les actionner ?
 - Courant profond et puissant de la science ouverte
-    - reproductibilité
+    - Reproductibilité
 - Nouvelles méthodes & terrains en SHS
 
 ---
@@ -110,7 +110,7 @@ Dépôt Github : [https://github.com/pyshs/cuso2025](https://github.com/pyshs/cu
 
 ## Programmer ?
 
-**Une définition**: utiliser des instructions (code/script) dans un langage (formalisé) pour faire réaliser (exécuter) à un ordinateur des actions.
+**Une définition** : utiliser des instructions (code/script) dans un langage (formalisé) pour faire réaliser (exécuter) à un ordinateur des actions.
 
 ![](img/programmer.png){style="display:block; margin:auto;"}
 
@@ -125,7 +125,7 @@ Pour qu'une instruction devienne une action, il faut toute une série de médiat
 - Logiciel (OS, IDE, etc.)
 - Données (formats)
 - Language pour les instructions
-- Écriture de  en algorithme
+- Écriture algorithmique
 
 ---
 
@@ -145,7 +145,7 @@ Pour qu'une instruction devienne une action, il faut toute une série de médiat
 Abstractions (source code) permettant d'écrire des instructions (machine code)
 
 - Séparer le matériel des opérations (portabilité)
-    - Compulation/interprétation
+    - Compilation/interprétation
 - Des langages différents (plus ou moins abstraits)
 - Des opérations partagées par tous les langages (opérations mathématiques)
 
@@ -169,7 +169,7 @@ Programmer n'est pas forcément construire un logiciel
 - **"Amateurisme"** : pas le coeur de métier
 
 ::: {style="font-size: 70%;"}
-« in contrast to software engineering, there is no externally speciﬁed goal or design target. Instead, the user explores and discovers their goal as they gain understanding from iteratively executing the code and thinking about the results and their data. » (Granger et Perez, 2021) 
+« in contrast to software engineering, there is no externally specified goal or design target. Instead, the user explores and discovers their goal as they gain understanding from iteratively executing the code and thinking about the results and their data. » (Granger et Perez, 2021) 
 :::
 
 <!-- 
@@ -225,7 +225,7 @@ Programmer n'est pas forcément construire un logiciel
 
 ---
 
-## Parce que les data science
+## Parce que les data sciences
 
 ![](img/pythondatascientist.jpg){style="display:block; margin:auto;"}
 
@@ -233,11 +233,11 @@ Programmer n'est pas forcément construire un logiciel
 
 ## Et plus généralement
 
-- libre et interopérable
-- polyvalent
-- pédagogique par design
-- enseigné de plus en plus tôt
-- le plus utilisé en traitement des données
+- Libre et interopérable
+- Polyvalent
+- Pédagogique par design
+- Enseigné de plus en plus tôt
+- Le plus utilisé en traitement des données
     - [Sondage stackoverflow](https://survey.stackoverflow.co/2023/#technology-most-popular-technologies) ; [TIOBE index](https://www.tiobe.com/tiobe-index/) ; [Github](https://github.blog/news-insights/octoverse/octoverse-2024/)
 ---
 
@@ -325,7 +325,6 @@ Release anuelle
 
 ![](img/ecosysteme.png){style="display:block; margin:auto;"}
 
----
 
 # Comment s'y mettre ?
 
@@ -385,7 +384,7 @@ Une diversité d'outils adaptés à des pratiques différentes
 
 
 -   Des langages qui ont évolué
-    - Par exemple les *f-string*, l'asynchrone, ...
+    - Par exemple les *f-string*, l'asynchrone...
 -   Et qui évoluent
     - Par exemple les normes de *gradual typing*
 -   Abstraction progressive
@@ -465,9 +464,9 @@ scripttoutfait.run()
 - Manipuler des données
     - Découper un fichier trop volumineux
 - Transformer des données
-    - pour Iramuteq ou pour l’analyse de réseaux (mise en forme de corpus)
+    - Pour Iramuteq ou pour l’analyse de réseaux (mise en forme de corpus)
 - Automatiser des tâches
-    - conversion pdf > textes
+    - Conversion pdf > textes
 
 - Script dans logiciel
     QGIS ou dans OpenRefine
@@ -489,9 +488,9 @@ scripttoutfait.run()
 ## Usages "orientés automatisation"
 
 - Systématiser des collectes API
-    - OCR Gallica, forums, ...
+    - OCR Gallica, forums...
 - Surveillance d'événements
-    - modifications d’un site
+    - Modifications d’un site
 - Workflow exécutable
     - Ensemble des étapes collecte/analyse/résultats
 - Déployer un site web en Python
@@ -656,7 +655,7 @@ Possibilité d'un vrai plaisir
 ## C'est quoi un script ?
 
 - Script : ensemble de lignes de code
-- Exécuter : faire interpréter ce code par l'ordinateur.
+- Exécuter : faire interpréter ce code par l'ordinateur
 
 Pour cela, il faut avoir :
 
@@ -713,11 +712,11 @@ Le notebook n'est qu'un élément
 
 ## Quel IDE choisir
 
-Interactive Design Environnment
+Integrated Development Environment
 
-- un (simple) éditeur de texte
-- un IDE complet (VS Code)
-- un environnement Jupyter
+- Un (simple) éditeur de texte
+- Un IDE complet (VS Code)
+- Un environnement Jupyter
 
 Ce que ça change ?
 
@@ -765,10 +764,10 @@ Vous pouvez avoir plusieurs environnements virtuels
 
 ## Petite remarque sur ChatGPT&co
 
-- de plus en plus intégré dans la pratique
-    - et dans les outils (Copilot, [Codeium](https://codeium.com/), ...)
-- utile & pertinent de les utiliser
-- ne remplace pas la capaciter de structurer du code
+- De plus en plus intégré dans la pratique
+    - Et dans les outils (Copilot, [Codeium](https://codeium.com/), ...)
+- Utile & pertinent de les utiliser
+- Ne remplace pas la capaciter de structurer du code
 
 La programmation scientifique est surtout reprendre et modifier du code, il faut donc le rendre **habitable**.
 
