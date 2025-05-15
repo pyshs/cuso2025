@@ -128,7 +128,7 @@ Pour qu'une instruction devienne une action, il faut toute une série de médiat
 
 Le passage du formel à l'action nécessite un opérateur qui respecte la syntaxe et la grammaire.
 
-https://youtu.be/FN2RM-CHkuI?t=40
+[Exact Instructions Challenge PB&J Classroom Friendly | Josh Darnit](https://youtu.be/FN2RM-CHkuI?t=40)
 
 
 ---
@@ -457,6 +457,8 @@ Un vaste panorama de possibilités
 - des opérations "discrètes"
 - des nouvelles opérations
 - de nouvelles collaborations
+
+**Différents types d'usages**
 
 ---
 
