@@ -33,11 +33,13 @@ Il existe beaucoup de [cheatsheet](https://www.pythoncheatsheet.org/cheatsheet/b
 
 ![](img/primitive.jpeg){fig-align="center"}
 
+Et certains qu'on définit nous-même.
+
 ------------------------------------------------------------------------
 
-## Étape suivante
+## Montée en abstraction
 
-Montée en abstraction
+Transformer le code en modules réutilisables
 
 -   Les fonctions
 -   Les modules
@@ -45,28 +47,20 @@ Montée en abstraction
 
 Et tout réunir dans des scripts avec vos données
 
-------------------------------------------------------------------------
 
-## Comment réduire son code ?
-
--   Des stratégies pour avoir du code plus compact
-    -   Exemple de la compréhension de liste
-    -   Éviter la redondance
--   Le décomposer en blocs faciles à lire
--   Créer des fonctions
--   Créer un module à part
--   Créer une bibliothèque ...
 
 ------------------------------------------------------------------------
 
-## Les fonctions
+## Les fonctions en programmation
 
-Une fonction est une séquence de code (une série d'opérations) entre des entrées et des sorties auquel on donne un nom.
+Une fonction est un bloc code (une série d'opérations) qui part de certaines entrées, fait des actions, et potentiellement retourne des valeurs
 
 -   On **déclare** une fonction
     -   Ses **arguments** d'entrée
     -   Sa sortie qu'elle renvoie
     -   Son nom
+    -  Les opérations qu'elle réalise (avec effets de bord)
+
 -   On l'exécute ensuite
 
 ------------------------------------------------------------------------
@@ -296,10 +290,10 @@ NB : [Generative AI exists because of the transformer](https://ig.ft.com/generat
 
 ## Et bien d'autres :
 
--   BeautifulSoup pour traiter des données html
--   Dask pour le calcul Big Data
--   Plotly pour des figures interactives
--   Networkx pour l'analyse de réseau
+-   **Networkx** pour l'analyse de réseau
+-   **BeautifulSoup** pour traiter des données html
+-   **Dask** pour le calcul Big Data
+-   **Plotly** pour des figures interactives
 -   ...
 
 ------------------------------------------------------------------------
@@ -321,6 +315,18 @@ NB : [Generative AI exists because of the transformer](https://ig.ft.com/generat
 3.  ... regarder régulièrement ce qui se fait.
 
 Et surtout : lire la documentation et les exemples !
+
+------------------------------------------------------------------------
+
+## Nettoyer son code
+
+-   Des stratégies d'écriture
+    -   Exemple de la compréhension de liste
+    -   Éviter la redondance
+-   Le décomposer en blocs faciles à lire
+-   Créer des fonctions
+-   Créer un module à part
+-   Créer une bibliothèque ...
 
 ------------------------------------------------------------------------
 
