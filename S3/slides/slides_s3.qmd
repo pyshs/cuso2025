@@ -6,6 +6,7 @@ author: "Émilien Schultz - Léo Mignot"
 format: 
     revealjs:
         slideNumber: true
+        embed-resources: true
 
 ---
 
@@ -15,81 +16,78 @@ format:
 
 Mais pas de panique : il n'est pas nécessaire de tout savoir pour programmer.
 
----
+------------------------------------------------------------------------
 
 ## Petit récapitulatif des notions
 
-- Principal objectif : **lire un script**
-- Les étapes d'exécution / les blocs
-- La création de variables/objets
-- Les entrées sorties
+-   Principal objectif : **lire un script**
+-   Les étapes d'exécution / les blocs
+-   La création de variables/objets
+-   Les entrées sorties
 
 Il existe beaucoup de [cheatsheet](https://www.pythoncheatsheet.org/cheatsheet/basics) avec les notions qui vous permettent d'avoir une idée de l'étendue du langage (jetez un coup d'oeil).
 
----
+------------------------------------------------------------------------
 
 ## À avoir en tête : des objets partout
 
 ![](img/primitive.jpeg){fig-align="center"}
 
----
-
+------------------------------------------------------------------------
 
 ## Étape suivante
 
 Montée en abstraction
 
-- Les fonctions
-- Les modules
-- Les bibliothèques
+-   Les fonctions
+-   Les modules
+-   Les bibliothèques
 
 Et tout réunir dans des scripts avec vos données
 
----
-
-
+------------------------------------------------------------------------
 
 ## Comment réduire son code ?
 
-- Des stratégies pour avoir du code plus compact
-    - Exemple de la compréhension de liste
-    - Éviter la redondance
-- Le décomposer en blocs faciles à lire
-- Créer des fonctions
-- Créer un module à part
-- Créer une bibliothèque ...
+-   Des stratégies pour avoir du code plus compact
+    -   Exemple de la compréhension de liste
+    -   Éviter la redondance
+-   Le décomposer en blocs faciles à lire
+-   Créer des fonctions
+-   Créer un module à part
+-   Créer une bibliothèque ...
 
----
+------------------------------------------------------------------------
 
 ## Les fonctions
 
 Une fonction est une séquence de code (une série d'opérations) entre des entrées et des sorties auquel on donne un nom.
 
-- On **déclare** une fonction
-    - Ses **arguments** d'entrée
-    - Sa sortie qu'elle renvoie
-    - Son nom
-- On l'exécute ensuite
+-   On **déclare** une fonction
+    -   Ses **arguments** d'entrée
+    -   Sa sortie qu'elle renvoie
+    -   Son nom
+-   On l'exécute ensuite
 
----
+------------------------------------------------------------------------
 
 ## Fonctions de base de Python
 
-- print
-- input
-- type
-- len
-- range
-- max
-- sorted
-- list
-- ...
+-   print
+-   input
+-   type
+-   len
+-   range
+-   max
+-   sorted
+-   list
+-   ...
 
 ## Possibilité de définir ses propres fonctions
 
 Opérateurs `def` et `return`
 
-```{.python}
+``` python
 def nom_de_la_fonction(entrée1, entrée2, ...):
     """
     DOCSTRING
@@ -101,8 +99,7 @@ def nom_de_la_fonction(entrée1, entrée2, ...):
 
 Une fois définie, il est possible d'utiliser cette fonction
 
-
-```{.python}
+``` python
 nom_de_la_fonction(val1, val2)
 ```
 
@@ -110,10 +107,9 @@ Une fonction est aussi un objet ...
 
 ## Application : mettre en fonction le script de la séance 2
 
-
-- Entrée un texte et le seuil de lettre
-- Ecrire une docstring
-- Renvoyer à la sortie le dictionnaire d'information
+-   Entrée : un texte et le seuil de lettre
+-   Ecrire une docstring
+-   Renvoyer à la sortie le dictionnaire d'informations
 
 # Au-delà du langage
 
@@ -125,14 +121,14 @@ Une fonction est aussi un objet ...
 
 ## Module de la librairie standard
 
-- os
-- math
-- time
-- ...
+-   os
+-   math
+-   time
+-   ...
 
 Importation directe
 
-```{.python}
+``` python
 import math
 ```
 
@@ -164,7 +160,7 @@ for i in itertools.combinations(ensemble, 2):
     print(i)
 ```
 
----
+------------------------------------------------------------------------
 
 ## Au-delà, codes Python non-standards
 
@@ -172,39 +168,38 @@ Un vaste ensemble de contenus
 
 ![](img/universe.jpeg){fig-align="center"}
 
----
+------------------------------------------------------------------------
 
 ## Du module à la bibliothèque
 
-- **Module** : un fichier .py qui contient le code
-- **Package** : une collection de module dans un dossier
-- **Bibliothèque** : un ensemble interdépendant de code 
+-   **Module** : un fichier .py qui contient le code
+-   **Package** : une collection de modules dans un dossier
+-   **Bibliothèque** : un ensemble interdépendant de code
 
 Pour complexifier, ces éléments peuvent se retrouver à plusieurs endroits ...
 
-- Dépôt officiel
-- Page github
-- ...
+-   Dépôt officiel
+-   Page github
+-   ...
 
----
+------------------------------------------------------------------------
 
-###
+### 
 
 ![](img/packagesmodules.png){fig-align="center"}
 
-
----
+------------------------------------------------------------------------
 
 ## Intermède
 
 Créons notre module Python avec la fonction créée au début de la séance
 
-- Mettre la déclaration de la fonction dans un fichier `.py`
-- L'importer pour l'utiliser
+-   Mettre la déclaration de la fonction dans un fichier `.py`
+-   L'importer pour l'utiliser
 
 Cela permet de rendre notre code plus modulaire.
 
----
+------------------------------------------------------------------------
 
 ## Bibliothèques publiées
 
@@ -212,27 +207,27 @@ Un dépôt centralisé et un outil `pip` pour installer facilement
 
 ![](img/pypi.png){fig-align="center"}
 
----
+------------------------------------------------------------------------
 
 ## Commentaires
 
-- tous les codes ne sont pas publiés 
-- `pip` installe les dépendances déclarées
-- la publication d'une bibliothèque nécessite de recourir à des outils
-    - poetry, flit, etc.
+-   tous les codes ne sont pas publiés
+-   `pip` installe les dépendances déclarées
+-   la publication d'une bibliothèque nécessite de recourir à des outils
+    -   poetry, flit, etc.
 
----
+------------------------------------------------------------------------
 
 ## La situation
 
-- De nombreux codes
-- Une partie publiée mais sans vérification
-    - Anciens
-    - Buggés
+-   De nombreux codes
+-   Une partie publiée mais sans vérification
+    -   Anciens
+    -   Buggés
 
 Se repérer dans cette jungle ...
 
----
+------------------------------------------------------------------------
 
 ## SciPy : quelques bibliothèques intégrées
 
@@ -240,128 +235,121 @@ Se repérer dans cette jungle ...
 
 Chaque bibliotèque a son histoire...
 
-
----
+------------------------------------------------------------------------
 
 ## Numpy : l'infrastructure numérique
 
 ![](img/numpy.png){fig-align="center"}
 
-
----
+------------------------------------------------------------------------
 
 ## Matplotlib : l'infrastructure graphique
 
 ![](img/matplotlib.png){fig-align="center"}
 
-
----
+------------------------------------------------------------------------
 
 ## SciPy : boîte à outils du computationnel scientifique
 
 ![](img/scipy.png){fig-align="center"}
 
-
----
+------------------------------------------------------------------------
 
 ## Pandas : statistiques dans les tableaux
 
 ![](img/pandas.png){fig-align="center"}
 
-
----
+------------------------------------------------------------------------
 
 ## Seaborn : visualisations scientifiques avancées
 
 ![](img/seaborn.png){fig-align="center"}
 
-
----
+------------------------------------------------------------------------
 
 ## Scikit-learn : tout le machine learning
 
 ![](img/sklearn.png){fig-align="center"}
 
-
----
+------------------------------------------------------------------------
 
 ## SpaCy : NLP facile
 
 ![](img/spacy.png){fig-align="center"}
 
-
----
+------------------------------------------------------------------------
 
 ## Streamlit : Construire des applications
 
 ![](img/streamlit.png){fig-align="center"}
 
-
----
+------------------------------------------------------------------------
 
 ## Transformers
 
 ![](img/transformers.png){fig-align="center"}
 
+NB : [Generative AI exists because of the transformer](https://ig.ft.com/generative-ai/) (explication par le Financial Times)
 
----
+
+------------------------------------------------------------------------
 
 ## Et bien d'autres :
 
-- BeautifulSoup pour traiter des données html
-- Dask pour le calcul Big Data
-- Plotly pour des figures interactives
-- Networkx pour l'analyse de réseau
-- ...
+-   BeautifulSoup pour traiter des données html
+-   Dask pour le calcul Big Data
+-   Plotly pour des figures interactives
+-   Networkx pour l'analyse de réseau
+-   ...
 
----
+------------------------------------------------------------------------
 
 ## Démarche quand on a une question
 
-- Identifier la bibliothèque pertinente - attention, les choses peuvent changer
-- Lire la documentation / installer
-- Tester sur un petit exemple
-- Intégrer les fonctions dont on a besoin
-- Éventuellement : développer de la virtuosité
+-   Identifier la bibliothèque pertinente - attention, les choses peuvent changer
+-   Lire la documentation / installer
+-   Tester sur un petit exemple
+-   Intégrer les fonctions dont on a besoin
+-   Éventuellement : développer de la virtuosité
 
----
+------------------------------------------------------------------------
 
 ## En synthèse
 
-1. Développer des compétences sur des bibliothèques stables 
-2. ... son sens de l’orientation dans l’open source
-3. ... regarder régulièrement ce qui se fait.
+1.  Développer des compétences sur des bibliothèques stables
+2.  ... son sens de l’orientation dans l’open source
+3.  ... regarder régulièrement ce qui se fait.
 
 Et surtout : lire la documentation et les exemples !
 
----
+------------------------------------------------------------------------
 
 ## En pratique
 
-On veut récupérer la page web de l'université pour savoir si on parle de science ouverte. 
+On veut récupérer la page web de l'université pour savoir si on parle de science ouverte.
 
 **Comment faire ?**
 
----
+------------------------------------------------------------------------
 
 ## Etape 0 : traduire l'opération
 
 Programmer c’est décomposer en étapes
 
-- une page web s'obtient par une requête URL 
-- veut donc :
-    - avoir une url
-    - faire la requête
-    - récupérer le contenu
-    - regarder si notre contenu est dedans
+-   une page web s'obtient par une requête URL
+-   veut donc :
+    -   avoir une url
+    -   faire la requête
+    -   récupérer le contenu
+    -   regarder si notre contenu est dedans
 
----
+------------------------------------------------------------------------
 
 ## Solution 1 : le module standard
 
 Module urllib.request, avec sa [documentation](https://docs.python.org/3/library/urllib.request.html#module-urllib.request)
 
-```python
+``` python
 from urllib.request import urlopen
 url = "https://www.cuso.ch/"
 with urlopen(url) as response:
@@ -370,22 +358,22 @@ with urlopen(url) as response:
 
 Rien besoin d'installer, mais pas une interface très facile à prendre en main.
 
----
+------------------------------------------------------------------------
 
 ## Solution 2 : une bibliothèque
 
 ![](img/requests.png)
 
---- 
+------------------------------------------------------------------------
 
 ## Importance de la documentation
 
-- Important de lire les documentations
-- Important d'écrire de la documentation
+-   Important de lire les documentations
+-   Important d'écrire de la documentation
 
 **Python a une bonne documentation généralement**
 
----
+------------------------------------------------------------------------
 
 ## Installation et tentatives
 
@@ -393,63 +381,61 @@ Pour installer une bibliothèque, une ligne de commande
 
 `pip install NOM`
 
-- Dernière version compatible
-- Installe aussi les dépendances
-- Possibilité de préciser la version à installer
+-   Dernière version compatible
+-   Installe aussi les dépendances
+-   Possibilité de préciser la version à installer
 
----
+------------------------------------------------------------------------
 
 ## Application
 
 Dans un notebook
 
-- installer requests
-- lire la documentation
-- récupérer une page
-- voir le type des objets manipulés
-- regarder le contenu récupéré
-- comment tester la présence d'élément dans la page
+-   installer requests
+-   lire la documentation
+-   récupérer une page
+-   voir le type des objets manipulés
+-   regarder le contenu récupéré
+-   comment tester la présence d'éléments dans la page
 
----
+------------------------------------------------------------------------
 
 ## Chemins & fichiers
 
-- Important de se repérer sur l'ordinateur
-- Le dossier courant est `.`
-- Travailler en ligne de commande
-- Possibilité d'utiliser le module os pour créer des dossiers
-- Module `pathlib` pour manipuler des objets `Path`
+-   Important de se repérer sur l'ordinateur
+-   Le dossier courant est `.`
+-   Travailler en ligne de commande
+-   Possibilité d'utiliser le module os pour créer des dossiers
+-   Module `pathlib` pour manipuler des objets `Path`
 
----
-
+------------------------------------------------------------------------
 
 ## Gérer du html
 
-- Parser du HTML c'est pas évident
-- Le problème est courant
-- Il doit donc exister une bibliothèque
-- Jetons un coup d'oeil sur `BeautifulSoup`
-
+-   Parser du HTML c'est pas évident
+-   Le problème est courant
+-   Il doit donc exister une bibliothèque
+-   Jetons un coup d'oeil sur `BeautifulSoup`
 
 # Bonus : parler des IDE
 
 ## Où coder ?
 
-- JupyterLab
-- Visual Studio Code
-- Atom
-- Sublime
-- PyCharm
-- NetBeans
-- ...
+-   JupyterLab
+-   Visual Studio Code
+-   Atom
+-   Sublime
+-   PyCharm
+-   NetBeans
+-   ...
 
 ## Linters et formatters
 
 Améliorer la structure de son code
 
-- [black](https://pypi.org/project/black/)
-- [ruff](https://pypi.org/project/ruff/)
+-   [black](https://pypi.org/project/black/)
+-   [ruff](https://pypi.org/project/ruff/)
 
 Et tester les types
 
-- [mypy](https://pypi.org/project/mypy/)
+-   [mypy](https://pypi.org/project/mypy/)
