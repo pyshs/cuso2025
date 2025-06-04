@@ -1,0 +1,229 @@
+---
+title: "Python pour les SHS"
+subtitle: "Données tabulaires avec Pandas"
+author: "Émilien Schultz - Léo Mignot"
+#format: pptx
+format:
+    revealjs:
+        slideNumber: true
+---
+
+## Où on est actuellement
+
+- bases du langage
+- structure d'un script
+- installer des bibliothèques
+    - lire la documentation
+
+Maintenant : aller vers des traitements "réels"
+
+- des bibliothèques puissantes
+- du Python pour lier les deux
+
+
+---
+
+## Aujourd'hui : les données tabulaires
+
+- Tableaux = base des statistiques
+- Une fois qu'on a un tableau bien propre
+    - Transformer
+    - Calculer
+    - Visualiser
+    - Exporter
+
+Avant : le domaine de la transformation des données peu/pas structurées
+
+---
+
+## Structurer les données
+
+- Une étape importante
+- Souvent invisible
+
+![](./img/data_pipeline.png){fig-align="center"}
+
+---
+
+## Un concept : tidy data
+
+[Popularisé par Hadley Wickham en R](https://vita.had.co.nz/papers/tidy-data.pdf)
+
+- Chaque variable - une colonne
+- Chaque observation - une ligne
+- Une valeur par cellule
+
+*Souvent, un travail amont à faire pour y parvenir*
+
+
+---
+
+## Pandas (Panel data)
+
+Une bibliothèque dédiée à la manipulation de données tabulaires (lignes/colonnes) + séries temporelles
+
+![](./img/statspandas.png){fig-align="center"}
+
+---
+
+## Transition douce d'Excel vers les bases de données
+
+![](./img/pandas.jpg){fig-align="center"}
+
+---
+
+## Quelques éléments
+
+- Facilite le traitement des données sous forme tableau
+- Usage comme base de données
+- Une grammaire compatible avec d'autres bibliothèques
+    - Montéee en taille avec Dask
+- Permet de faire facilement statistiques/visualisations exploratoires
+
+**Par contre sa propre philosophie**
+
+---
+
+##
+
+![](./img/pandasfunctions.png){fig-align="center"}
+
+[Mindmap complet](https://xmind.ai/share/ugVH30g4)
+
+
+---
+
+## Nouvel outil = nouvel objet
+
+Le `DataFrame`
+
+![](./img/df.png){fig-align="center"}
+
+*Petite démo*
+
+---
+
+## Et une multitudes de possibilités
+
+[Une cheatsheet pour voir les possibilités](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf)
+
+![](./img/pandascheatsheet.png){fig-align="center"}
+
+Et de manière de faire...
+
+---
+
+## Des opérations générales
+
+![](./img/pandascompare.png){fig-align="center"}
+
+
+---
+
+## Aller vers des opérations de base de données
+
+![](./img/join2.png){fig-align="center"}
+
+
+
+
+---
+
+
+## Tips : mieux comprendre la combinaison d'opérations
+
+[Voir les opérations](https://pandastutor.com/)
+
+![](./img/pandastutor.png){fig-align="center"}
+
+
+---
+
+
+## Au-delà de Pandas
+
+- Des bibliothèques qui reprennent la structure
+    - GeoPandas
+- Compatibilité avec l'écosystème SciPy
+- Des limites :
+    - Visualisations avec des bibliothèques dédiées
+    - Traitements (modèles)
+    - Big Data ...
+
+---
+
+## Des critiques
+
+- Une API un peu lourde
+- De nombreuses manières de faire la même chose
+
+![](./img/procons.png){fig-align="center"}
+
+[Why pandas feels clunky when coming from R](https://www.sumsar.net/blog/pandas-feels-clunky-when-coming-from-r/)
+---
+
+## Alternatives
+
+- Dask
+- Polars
+- PySpark
+- Numpy
+- Apache Arrow
+- ...
+
+
+# Découverte des possibilités de Pandas
+
+## Différents types de manipulations
+
+Avec un jeu de données d'enquête par questionnaire existant
+
+- **Charger** des données
+- **Sélectionner** élément/ligne/colonne
+- **Filtrer** comme une base de donnée
+- **Calculer** avec les méthodes spécifiques
+- **Visualiser** les résultats
+
+---
+
+
+
+## Aller vers la pratique
+
+Jeu de données : 
+
+- Publications ouvertes [OpenAlex](https://openalex.org/)
+- Sciences sociales computationnelles & humanités numériques
+
+## Référence
+
+![](./img/bookpython.png){fig-align="center"}
+
+<!--
+# Avant les données structurées
+
+## Nettoyer des données de presse
+
+- Données dans `data/data.zip`
+    - Mention de `Suisse` dans la presse française nationale du mois précédent
+- A la base du HTML
+- Mis en forme en CSV
+- Que peut-on apprendre de ce jeu de données ?
+
+---
+
+## Traitements à réaliser
+
+- Distribution des journaux
+- Distribution des dates + visualisation
+- Compte de l'occurence du terme Suisse
+- Extraire juste les phrases concernées
+
+---
+-->
+
+<!--
+
+- fichier, module, package, bibliothèque...
+- raise / assert / erreurs
+-->
