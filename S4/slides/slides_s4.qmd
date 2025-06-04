@@ -77,7 +77,7 @@ Une bibliothèque dédiée à la manipulation de données tabulaires (lignes/col
 - Facilite le traitement des données sous forme tableau
 - Usage comme base de données
 - Une grammaire compatible avec d'autres bibliothèques
-    - Montéee en taille avec Dask
+    - Montée en taille avec Dask
 - Permet de faire facilement statistiques/visualisations exploratoires
 
 **Par contre sa propre philosophie**
@@ -109,7 +109,7 @@ Le `DataFrame`
 
 ![](./img/pandascheatsheet.png){fig-align="center"}
 
-Et de manière de faire...
+Et de manières de faire...
 
 ---
 
