@@ -4,3 +4,6 @@
 
 # Fichiers temporaires Word/Excel
 ~$*
+
+# Files
+data/DH_openalex.csv
