@@ -4,3 +4,7 @@
 
 # Fichiers temporaires Word/Excel
 ~$*
+
+# Files
+# ignore pour éviter fichier trop large pour ajout git
+data/DH_openalex.csv
