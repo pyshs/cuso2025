@@ -252,8 +252,8 @@ Beaucoup de code disponible
 ##  Ça se complique :
 
 - Création d'une figure :
-    - explicitement
-    - implicitement (crée un contexte de figure)
+    - explicitement (orienté objet)
+    - implicitement (impératif, crée un contexte de figure)
 - Plusieurs manières "conventionnelles" d'usage
 - Beaucoup, beaucoup d'options ...
 
