@@ -8,7 +8,7 @@
 <link href="slides_s5_files/libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="slides_s5_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="slides_s5_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.5.57">
+  <meta name="generator" content="quarto-1.4.551">
 
   <meta name="author" content="Émilien Schultz">
   <title>Python pour les SHS</title>
@@ -42,7 +42,7 @@
     }
     @media print {
     pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
     }
     pre.numberSource code
       { counter-reset: source-line 0; }
@@ -70,7 +70,7 @@
     code span.at { color: #657422; } /* Attribute */
     code span.bn { color: #ad0000; } /* BaseN */
     code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.cf { color: #003b4f; } /* ControlFlow */
     code span.ch { color: #20794d; } /* Char */
     code span.cn { color: #8f5902; } /* Constant */
     code span.co { color: #5e5e5e; } /* Comment */
@@ -84,7 +84,7 @@
     code span.fu { color: #4758ab; } /* Function */
     code span.im { color: #00769e; } /* Import */
     code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.kw { color: #003b4f; } /* Keyword */
     code span.op { color: #5e5e5e; } /* Operator */
     code span.ot { color: #003b4f; } /* Other */
     code span.pp { color: #ad0000; } /* Preprocessor */
@@ -430,7 +430,7 @@
 
 </section>
 <section id="les-statistiques-univariées" class="slide level2">
-<h2>Les statistiques univariées</h2>
+<h2>Les statistiques <strong>univariées</strong></h2>
 <p>Pandas est efficace pour</p>
 <ul>
 <li>Les indicateurs univariés</li>
@@ -520,8 +520,8 @@ P(Y = 1 \mid \mathbf{X}) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 X_1 + \beta_2 X_2
 <li>Contruire ses propres outils <code>Pyshs</code></li>
 </ul>
 </section>
-<section id="les-choses-évolues-ex.-de-prince" class="slide level2">
-<h2>Les choses évolues : ex. de Prince</h2>
+<section id="les-choses-évoluent-ex.-de-prince" class="slide level2">
+<h2>Les choses évoluent : ex. de Prince</h2>
 
 <img data-src="./img/prince.png" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="en-synthèse" class="slide level2">
@@ -551,22 +551,43 @@ P(Y = 1 \mid \mathbf{X}) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 X_1 + \beta_2 X_2
 
 <img data-src="./img/colormaps.png" class="r-stretch"><p><a href="https://ieeexplore.ieee.org/abstract/document/9919390?casa_token=ecMCemd2ZRwAAAAA:NcEJsqolbRXdy_K72GlMh9ucNP6-0hm-nMXam_HlLgd6ijY2aXEqSLGW_I3PyinhIjoseDE82B1dgUU">Rainbow Colormaps: What are They Good and Bad for?</a></p>
 </section>
-<section id="pleins-de-règles" class="slide level2">
-<h2>Pleins de règles</h2>
+<section id="plein-de-règles" class="slide level2">
+<h2>Plein de “règles”</h2>
 <p><a href="https://doi.org/10.1371/journal.pcbi.1003833">Rougier NP, Droettboom M, Bourne PE (2014) Ten Simple Rules for Better Figures. PLoS Comput Biol 10(9): e1003833</a></p>
+<div class="columns">
+<div class="column">
 <ol type="1">
-<li>Know Your Audience</li>
-<li>Identify Your Message</li>
-<li>Adapt the Figure to the Support Medium</li>
-<li>Captions Are Not Optional</li>
-<li>Do Not Trust the Defaults</li>
-<li>Use Color Effectively</li>
-<li>Do Not Mislead the Reader</li>
-<li>Avoid “Chartjunk”</li>
-<li>Message Trumps Beauty</li>
-<li>Get the Right Tool</li>
+<li>Know Your Audience<br>
+</li>
+<li>Identify Your Message<br>
+</li>
+<li>Adapt the Figure to the Support Medium<br>
+</li>
+<li>Captions Are Not Optional<br>
+</li>
+<li>Do Not Trust the Defaults<br>
+</li>
 </ol>
+</div><div class="column">
+<ol start="6" type="1">
+<li>Use Color Effectively<br>
+</li>
+<li>Do Not Mislead the Reader<br>
+</li>
+<li>Avoid “Chartjunk”<br>
+</li>
+<li>Message Trumps Beauty<br>
+</li>
+<li>Get the Right Tool<br>
+</li>
+</ol>
+</div>
+</div>
 </section>
+<section id="des-règles-adaptables" class="slide level2">
+<h2>Des “règles” … adaptables</h2>
+
+<img data-src="./img/regles_vs_guidelines.jpg" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="de-nombreuses-possibilités" class="slide level2">
 <h2>De nombreuses possibilités</h2>
 
@@ -577,6 +598,7 @@ P(Y = 1 \mid \mathbf{X}) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 X_1 + \beta_2 X_2
 <ul>
 <li><a href="https://python-graph-gallery.com/">Python Graph Gallery</a></li>
 <li><a href="https://matplotlib.org/2.0.2/gallery.html">Gallerie Matplotlib</a></li>
+<li><a href="https://www.data-to-viz.com/">Data to Viz</a> (plus généraliste, arbre décision visualisation)</li>
 </ul>
 <p>Beaucoup de code disponible</p>
 </section>
@@ -619,8 +641,8 @@ P(Y = 1 \mid \mathbf{X}) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 X_1 + \beta_2 X_2
 <ul>
 <li>Création d’une figure :
 <ul>
-<li>explicitement</li>
-<li>implicitement (crée un contexte de figure)</li>
+<li>explicitement (orienté objet)</li>
+<li>implicitement (impératif, crée un contexte de figure)</li>
 </ul></li>
 <li>Plusieurs manières “conventionnelles” d’usage</li>
 <li>Beaucoup, beaucoup d’options …</li>
@@ -943,7 +965,18 @@ P(Y = 1 \mid \mathbf{X}) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 X_1 + \beta_2 X_2
         }
         return false;
       }
-      const onCopySuccess = function(e) {
+      const clipboard = new window.ClipboardJS('.code-copy-button', {
+        text: function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+      });
+      clipboard.on('success', function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -975,29 +1008,7 @@ P(Y = 1 \mid \mathbf{X}) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 X_1 + \beta_2 X_2
         }, 1000);
         // clear code selection
         e.clearSelection();
-      }
-      const getTextToCopy = function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-      }
-      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-        text: getTextToCopy
       });
-      clipboard.on('success', onCopySuccess);
-      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-        // For code content inside modals, clipBoardJS needs to be initialized with a container option
-        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
-        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-          text: getTextToCopy,
-          container: window.document.getElementById('quarto-embedded-source-code-modal')
-        });
-        clipboardModal.on('success', onCopySuccess);
-      }
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
           var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -1005,7 +1016,7 @@ P(Y = 1 \mid \mathbf{X}) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 X_1 + \beta_2 X_2
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }
         // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
         for (var i=0; i<links.length; i++) {
           const link = links[i];
           if (!isInternal(link.href)) {

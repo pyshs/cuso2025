@@ -31,7 +31,7 @@ Pourquoi ?
 
 # Statistiques
 
-## Les statistiques univariées
+## Les statistiques **univariées**
 
 Pandas est efficace pour 
 
@@ -127,7 +127,7 @@ Regarder la documentation ; pas forcément parfaitement adapté à nos besoins.
 
 ---
 
-## Les choses évolues : ex. de Prince
+## Les choses évoluent : ex. de Prince
 
 ![](./img/prince.png){fig-align="center"}
 
@@ -168,20 +168,33 @@ Regarder la documentation ; pas forcément parfaitement adapté à nos besoins.
 
 ---
 
-## Pleins de règles
+## Plein de "règles"
 
 [Rougier NP, Droettboom M, Bourne PE (2014) Ten Simple Rules for Better Figures. PLoS Comput Biol 10(9): e1003833](https://doi.org/10.1371/journal.pcbi.1003833)
 
-1. Know Your Audience
-2. Identify Your Message
-3. Adapt the Figure to the Support Medium
-4. Captions Are Not Optional
-5. Do Not Trust the Defaults
-6. Use Color Effectively
-7. Do Not Mislead the Reader
-8. Avoid “Chartjunk”
-9. Message Trumps Beauty
-10. Get the Right Tool
+::: columns
+::: column
+1. Know Your Audience  
+2. Identify Your Message  
+3. Adapt the Figure to the Support Medium  
+4. Captions Are Not Optional  
+5. Do Not Trust the Defaults  
+:::
+
+::: column
+6. Use Color Effectively  
+7. Do Not Mislead the Reader  
+8. Avoid “Chartjunk”  
+9. Message Trumps Beauty  
+10. Get the Right Tool  
+:::
+:::
+
+
+---
+
+## Des "règles" … adaptables
+![](./img/regles_vs_guidelines.jpg){fig-align="center"}
 
 
 ---
@@ -200,6 +213,7 @@ Les galeries :
 
 - [Python Graph Gallery](https://python-graph-gallery.com/)
 - [Gallerie Matplotlib](https://matplotlib.org/2.0.2/gallery.html)
+- [Data to Viz](https://www.data-to-viz.com/) (plus généraliste, arbre décision visualisation)
 
 Beaucoup de code disponible
 
