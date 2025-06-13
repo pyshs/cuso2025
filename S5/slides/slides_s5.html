@@ -8,9 +8,9 @@
 <link href="slides_s5_files/libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="slides_s5_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="slides_s5_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.551">
+  <meta name="generator" content="quarto-1.5.57">
 
-  <meta name="author" content="Émilien Schultz">
+  <meta name="author" content="Émilien Schultz &amp; Léo Mignot">
   <title>Python pour les SHS</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -42,7 +42,7 @@
     }
     @media print {
     pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
     }
     pre.numberSource code
       { counter-reset: source-line 0; }
@@ -70,7 +70,7 @@
     code span.at { color: #657422; } /* Attribute */
     code span.bn { color: #ad0000; } /* BaseN */
     code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
     code span.ch { color: #20794d; } /* Char */
     code span.cn { color: #8f5902; } /* Constant */
     code span.co { color: #5e5e5e; } /* Comment */
@@ -84,7 +84,7 @@
     code span.fu { color: #4758ab; } /* Function */
     code span.im { color: #00769e; } /* Import */
     code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; } /* Keyword */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
     code span.op { color: #5e5e5e; } /* Operator */
     code span.ot { color: #003b4f; } /* Other */
     code span.pp { color: #ad0000; } /* Preprocessor */
@@ -397,7 +397,7 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Émilien Schultz 
+Émilien Schultz &amp; Léo Mignot 
 </div>
 </div>
 </div>
@@ -409,8 +409,8 @@
 <li>Pandas ++ exploration</li>
 <li>Mais :
 <ul>
-<li>Comment faire les statistiques habituelles en SHS (tableaux croisés, etc.)</li>
-<li>Comment mener des analyses plus poussées (modèles…) ?</li>
+<li>Réaliser les statistiques habituelles en SHS (tableaux croisés, etc.)</li>
+<li>Mener des analyses plus poussées (modèles…) ?</li>
 <li>Comment mettre correctement en forme un graphique ?</li>
 </ul></li>
 </ul>
@@ -468,6 +468,36 @@
 <li>Exemple avec la méthode <code>pandas.concat</code></li>
 <li>Manque encore quelques outils (exemple de <code>PySHS</code>)</li>
 </ul>
+</section>
+<section id="numpy-pour-le-calcul-sur-les-matrices" class="slide level2">
+<h2>Numpy pour le calcul sur les matrices</h2>
+<p><a href="https://numpy.org/doc/stable/reference/">Jeter un coup d’oeil à la documentation</a></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href=""></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb2-2"><a href=""></a></span>
+<span id="cb2-3"><a href=""></a>x <span class="op">=</span> np.array([<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">7</span>, <span class="dv">1</span>, <span class="dv">9</span>, <span class="dv">3</span>])</span>
+<span id="cb2-4"><a href=""></a></span>
+<span id="cb2-5"><a href=""></a>np.mean(x)      <span class="co"># Moyenne</span></span>
+<span id="cb2-6"><a href=""></a>np.median(x)    <span class="co"># Médiane</span></span>
+<span id="cb2-7"><a href=""></a>np.std(x)       <span class="co"># Écart-type</span></span>
+<span id="cb2-8"><a href=""></a>np.var(x)       <span class="co"># Variance</span></span>
+<span id="cb2-9"><a href=""></a>np.percentile(x, <span class="dv">25</span>)  <span class="co"># 1er quartile</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="beuacoup-de-fonctions" class="slide level2">
+<h2>Beuacoup de fonctions</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href=""></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb3-2"><a href=""></a></span>
+<span id="cb3-3"><a href=""></a>data <span class="op">=</span> np.random.normal(loc<span class="op">=</span><span class="dv">10</span>, scale<span class="op">=</span><span class="dv">2</span>, size<span class="op">=</span><span class="dv">1000</span>)</span>
+<span id="cb3-4"><a href=""></a></span>
+<span id="cb3-5"><a href=""></a><span class="co"># Covariance et corrélation (via matrices)</span></span>
+<span id="cb3-6"><a href=""></a>x <span class="op">=</span> np.random.rand(<span class="dv">100</span>)</span>
+<span id="cb3-7"><a href=""></a>y <span class="op">=</span> np.random.rand(<span class="dv">100</span>)</span>
+<span id="cb3-8"><a href=""></a>np.cov(x, y)            <span class="co"># Matrice de covariance</span></span>
+<span id="cb3-9"><a href=""></a>np.corrcoef(x, y)       <span class="co"># Matrice de corrélation</span></span>
+<span id="cb3-10"><a href=""></a></span>
+<span id="cb3-11"><a href=""></a></span>
+<span id="cb3-12"><a href=""></a><span class="co"># Tri et statistiques conditionnelles</span></span>
+<span id="cb3-13"><a href=""></a>sorted_data <span class="op">=</span> np.sort(data)</span>
+<span id="cb3-14"><a href=""></a>above_mean <span class="op">=</span> data[data <span class="op">&gt;</span> np.mean(data)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="statistiques-avancées" class="slide level2">
 <h2>Statistiques avancées</h2>
@@ -581,8 +611,7 @@ P(Y = 1 \mid \mathbf{X}) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 X_1 + \beta_2 X_2
 <li>Get the Right Tool<br>
 </li>
 </ol>
-</div>
-</div>
+</div></div>
 </section>
 <section id="des-règles-adaptables" class="slide level2">
 <h2>Des “règles” … adaptables</h2>
@@ -965,18 +994,7 @@ P(Y = 1 \mid \mathbf{X}) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 X_1 + \beta_2 X_2
         }
         return false;
       }
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        text: function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-        }
-      });
-      clipboard.on('success', function(e) {
+      const onCopySuccess = function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -1008,7 +1026,29 @@ P(Y = 1 \mid \mathbf{X}) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 X_1 + \beta_2 X_2
         }, 1000);
         // clear code selection
         e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
       });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
           var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -1016,7 +1056,7 @@ P(Y = 1 \mid \mathbf{X}) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 X_1 + \beta_2 X_2
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }
         // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
         for (var i=0; i<links.length; i++) {
           const link = links[i];
           if (!isInternal(link.href)) {

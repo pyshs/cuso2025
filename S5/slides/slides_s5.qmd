@@ -1,7 +1,7 @@
 ---
 title: "Python pour les SHS"
 subtitle: "Statistiques et visualisations"
-author: "Émilien Schultz"
+author: "Émilien Schultz & Léo Mignot"
 #format: pptx
 format:
     revealjs:
@@ -13,8 +13,8 @@ format:
 
 - Pandas ++ exploration
 - Mais :
-    - Comment faire les statistiques habituelles en SHS (tableaux croisés, etc.)
-    - Comment mener des analyses plus poussées (modèles...) ?
+    - Réaliser les statistiques habituelles en SHS (tableaux croisés, etc.)
+    - Mener des analyses plus poussées (modèles...) ?
     - Comment mettre correctement en forme un graphique ?
 
 ---
@@ -71,6 +71,47 @@ stat, p = normaltest(data)
 - Puis les combiner
 - Exemple avec la méthode `pandas.concat`
 - Manque encore quelques outils (exemple de `PySHS`)
+
+---
+
+
+## Numpy pour le calcul sur les matrices
+
+[Jeter un coup d'oeil à la documentation](https://numpy.org/doc/stable/reference/)
+
+```python
+import numpy as np
+
+x = np.array([2, 4, 7, 1, 9, 3])
+
+np.mean(x)      # Moyenne
+np.median(x)    # Médiane
+np.std(x)       # Écart-type
+np.var(x)       # Variance
+np.percentile(x, 25)  # 1er quartile
+```
+
+---
+
+## Beuacoup de fonctions
+
+```python
+import numpy as np
+
+data = np.random.normal(loc=10, scale=2, size=1000)
+
+# Covariance et corrélation (via matrices)
+x = np.random.rand(100)
+y = np.random.rand(100)
+np.cov(x, y)            # Matrice de covariance
+np.corrcoef(x, y)       # Matrice de corrélation
+
+
+# Tri et statistiques conditionnelles
+sorted_data = np.sort(data)
+above_mean = data[data > np.mean(data)]
+
+```
 
 ---
 
