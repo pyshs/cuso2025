@@ -88,7 +88,7 @@ Des traitements très variés
     - retrouver des éléments vs. les visualiser
 - Des métriques d'évaluation différentes
     - F1, corrélation, etc.
-- Des mises en oeuvres multiples
+- Des mises en oeuvre multiples
     - Logiciels, programmation, etc.
 
 *Difficile de tout faire :)*
@@ -102,7 +102,7 @@ Texte ➡️ Représentation numérique
 
 C'est quoi un texte ? Diversité de supports
 
-- Document avec des chaâines de caractères numériques
+- Document avec des chaines de caractères numériques
 - Pas encore mis en forme (PDF, images)
     - Enjeux d'OCR, de spatialisation (frame)
 
@@ -175,9 +175,9 @@ Importance de l'unité de base du mot
 
 - découpage en mots
 - suppression des mots vides
-- lemmatisation/stemmisation
+- lemmatisation/stemmisation (racinisation, stemmatisation)
 
-Pour de nombreux besoins spécifiques, intéressant de maîtriser les manipulations de bas niveaux
+Pour de nombreux besoins spécifiques, intéressant de maîtriser les manipulations de bas niveau
 
 ---
 
@@ -341,7 +341,7 @@ https://blog.dataiku.com/nlp-metamorphosis
 - Indicateur : nombre de paramètres
 - Des modèles de grande taille
     - Certains nécessitent des GPU
-    - Penser à utiliser des services dédiés si nécessaires
+    - Penser à utiliser des services dédiés si nécessaire
 
 **Un enjeu : manipuler ces modèles**
 

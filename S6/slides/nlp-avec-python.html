@@ -8,7 +8,7 @@
 <link href="nlp-avec-python_files/libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="nlp-avec-python_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="nlp-avec-python_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.5.57">
+  <meta name="generator" content="quarto-1.4.551">
 
   <meta name="author" content="Émilien Schultz &amp; Léo Mignot">
   <title>(Introduction au) TAL/NLP avec Python</title>
@@ -430,7 +430,7 @@
 <ul>
 <li>F1, corrélation, etc.</li>
 </ul></li>
-<li>Des mises en oeuvres multiples
+<li>Des mises en oeuvre multiples
 <ul>
 <li>Logiciels, programmation, etc.</li>
 </ul></li>
@@ -447,7 +447,7 @@
 <p>Texte ➡️ Représentation numérique</p>
 <p>C’est quoi un texte ? Diversité de supports</p>
 <ul>
-<li>Document avec des chaâines de caractères numériques</li>
+<li>Document avec des chaines de caractères numériques</li>
 <li>Pas encore mis en forme (PDF, images)
 <ul>
 <li>Enjeux d’OCR, de spatialisation (frame)</li>
@@ -519,9 +519,9 @@
 <ul>
 <li>découpage en mots</li>
 <li>suppression des mots vides</li>
-<li>lemmatisation/stemmisation</li>
+<li>lemmatisation/stemmisation (racinisation, stemmatisation)</li>
 </ul>
-<p>Pour de nombreux besoins spécifiques, intéressant de maîtriser les manipulations de bas niveaux</p>
+<p>Pour de nombreux besoins spécifiques, intéressant de maîtriser les manipulations de bas niveau</p>
 </section>
 <section id="tokénizer-une-opération-complexe" class="slide level2">
 <h2>Tokénizer : une opération complexe</h2>
@@ -681,7 +681,7 @@
 <li>Des modèles de grande taille
 <ul>
 <li>Certains nécessitent des GPU</li>
-<li>Penser à utiliser des services dédiés si nécessaires</li>
+<li>Penser à utiliser des services dédiés si nécessaire</li>
 </ul></li>
 </ul>
 <p><strong>Un enjeu : manipuler ces modèles</strong></p>
@@ -1036,7 +1036,18 @@
         }
         return false;
       }
-      const onCopySuccess = function(e) {
+      const clipboard = new window.ClipboardJS('.code-copy-button', {
+        text: function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+      });
+      clipboard.on('success', function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -1068,29 +1079,7 @@
         }, 1000);
         // clear code selection
         e.clearSelection();
-      }
-      const getTextToCopy = function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-      }
-      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-        text: getTextToCopy
       });
-      clipboard.on('success', onCopySuccess);
-      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-        // For code content inside modals, clipBoardJS needs to be initialized with a container option
-        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
-        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-          text: getTextToCopy,
-          container: window.document.getElementById('quarto-embedded-source-code-modal')
-        });
-        clipboardModal.on('success', onCopySuccess);
-      }
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
           var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -1098,7 +1087,7 @@
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }
         // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
         for (var i=0; i<links.length; i++) {
           const link = links[i];
           if (!isInternal(link.href)) {
